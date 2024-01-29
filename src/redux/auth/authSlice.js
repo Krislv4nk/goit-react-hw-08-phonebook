@@ -2,7 +2,10 @@ import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 
 import {apiRegisterUser, apiLoginUser, apiRefreshUser} from './authSlice.operations';
 
-export const getToken = state => state.auth.token;
+
+
+
+
 const initialState = {
   token: null,
   userData: null,

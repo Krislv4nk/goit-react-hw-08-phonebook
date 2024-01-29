@@ -1,18 +1,19 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import {selectAuthIsLoggedIn} from '../../redux/auth/authSlice.selectors';
+import { NavLink, Outlet } from 'react-router-dom';
 import css from './Navigation.module.css';
 
 
 const Navigation = () => {
 
- const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+ const isLoggedIn = useSelector(selectAuthIsLoggedIn);
 
   return (
     <div>
-      
+      <ul>
       {isLoggedIn ? (
-        <>
+        <li>
           <NavLink
             className={({ isActive }) =>
               `${css.navLink} ${isActive ? css.active : ''}`
@@ -21,9 +22,9 @@ const Navigation = () => {
           >
             Contacts
           </NavLink>
-        </>
+        </li>
       ) : (
-        <>
+        <li>
           <NavLink
             className={({ isActive }) =>
               `${css.navLink} ${isActive ? css.active : ''}`
@@ -32,7 +33,6 @@ const Navigation = () => {
           >
             Register
           </NavLink>
-
           <NavLink
             className={({ isActive }) =>
               `${css.navLink} ${isActive ? css.active : ''}`
@@ -41,8 +41,10 @@ const Navigation = () => {
           >
             Login
           </NavLink>
-        </>
+        </li>
       )}
+      <Outlet />
+      </ul>
     </div>
   );
 };
