@@ -1,0 +1,29 @@
+.contactItem {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.contactText {
+     display: flex;
+  gap: 20px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.contactName {
+    font-weight: bold;
+}
+.deleteContactBttn {
+    width: 70px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(134, 127, 127);
+    color: antiquewhite;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.deleteContactBttn:hover{
+    background-color: red;
+}
+.deleteContactBttn:focus{
+    background-color: #4CAF50;
+}

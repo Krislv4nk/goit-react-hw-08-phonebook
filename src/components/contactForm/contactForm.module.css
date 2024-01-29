@@ -1,0 +1,38 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+     border: 1px solid black;
+     padding: 20px;
+     width: 400px;
+}
+.label {
+display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.contactInput {
+ padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  color: rgb(70, 67, 67);
+  background-color: transparent;
+}
+.addContactBttn {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(134, 127, 127);
+    color: antiquewhite;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.addContactBttn:hover {
+    background-color: #f44336;
+}
+.addContactBttn:focus {
+    background-color: #4CAF50;
+}
