@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react';
-import css from './App.module.css';
-import { useDispatch } from 'react-redux';
-import { fetchContacts } from '../../redux/contacts/contactsSlice.operations';
-import { ContactForm } from '../contactForm/contactForm';
-import { Filter } from '../filter/filter';
-import { ContactList } from '../contactList/contactList';
+import React from 'react';
+// import css from './App.module.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import RegisterPage from 'pages/RegisterPage';
+import LoginPage from 'pages/LoginPage';
+import ContactsPage from 'pages/ContactsPage';
+import { Layout } from 'components/layout/layout';
+
+
 
 
 
 
 export const App = () => {
-  const dispatch = useDispatch();
-   
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch])
-
     return (
-      <div className={css.container}>
-        <h1 className={css.phoneBookTitle}>Phonebook</h1>
-        <ContactForm />
-        <h2 className={css.contactTitle}>Contacts</h2>
-        <Filter />
-        <ContactList/>
-      </div>
+      <Layout>
+            <Routes>
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />}/>
+                    <Route path="/contacts" element={<ContactsPage />}/>
+    
+
+                <Route path="*" element={<Navigate to="/login" />} />
+                <Route path="*" element={<Navigate to="/register" />} />
+            </Routes>
+        </Layout>
+      
     );
   }
 
