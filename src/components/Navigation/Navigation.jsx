@@ -6,9 +6,7 @@ import css from './Navigation.module.css';
 
 
 const Navigation = () => {
-
  const isLoggedIn = useSelector(selectAuthIsLoggedIn);
-
   return (
     <div>
       <ul>
