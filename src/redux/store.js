@@ -14,12 +14,6 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-const contactsConfig = {
-  key: 'contacts',
-  storage,
-  whitelist: ['contacts'],
-};
-
 const authConfig = {
   key: 'auth',
   storage,
@@ -28,7 +22,7 @@ const authConfig = {
 
  export const store = configureStore({
   reducer: {
-    contacts: persistReducer(contactsConfig, contactsReducer),
+    contacts: contactsReducer,
     filter: filterReducer,
     auth: persistReducer(authConfig, authReducer),
   },

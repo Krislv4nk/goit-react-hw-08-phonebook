@@ -26,6 +26,10 @@ export const selectFilterValue = createSelector(
 export const selectFilteredContacts = createSelector(
     [selectContacts, selectFilter],
     (contacts, filter) => {
+      if (!Array.isArray(contacts)) {
+        contacts = [];
+    }
+    
       return contacts.filter(({ name }) =>
         name.toLowerCase().includes(filter.toLowerCase().trim())
       );

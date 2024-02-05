@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from 'react-redux';
 import { apiRegisterUser } from '../redux/auth/authSlice.operations';
+import Notiflix from 'notiflix';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -22,13 +23,18 @@ const RegisterPage = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
+
     const formData = {
       name: data.get('firstName') + ' ' + data.get('lastName'),
       email: data.get('email'),
       password: data.get('password'),
     };
+    if (!formData.name || !formData.email || !formData.password) {
+      return Notiflix.Notify.failure('All fields must be filled out');
+    }
 
     dispatch(apiRegisterUser(formData));
+  
   };
 
   return (

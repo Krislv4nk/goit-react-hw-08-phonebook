@@ -9,9 +9,8 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import Notiflix from 'notiflix';
 
 const defaultTheme = createTheme();
 
@@ -26,7 +25,9 @@ const LoginPage = () => {
       email: data.get('email'),
       password: data.get('password'),
     };
-
+    if (!formData.email || !formData.password) {
+      return Notiflix.Notify.failure('All fields must be filled out');
+    }
     dispatch(apiLoginUser(formData));
   };
 

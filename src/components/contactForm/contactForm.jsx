@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {selectContacts} from '../../redux/contacts/contactSlice.selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk} from '../../redux/contacts/contactsSlice.operations';
-
+import Notiflix from 'notiflix';
 import css from "./contactForm.module.css";
 
 
@@ -32,14 +32,13 @@ export const ContactForm = () => {
         name.toLowerCase() === formData.name.toLowerCase() || 
         number === formData.number
     );
+    
     if (hasDuplicates) {
-      alert(`Contact ${formData.name} is already in contacts.`);
-      return;
+      return Notiflix.Notify.failure(`Contact ${formData.name} is already in contacts.`);
+      
     }
-
     const newContact = {
       ...formData,
-     
     };
     const action = addContactThunk(newContact);
     dispatch(action);
