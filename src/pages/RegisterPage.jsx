@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from 'react-redux';
 import { apiRegisterUser } from '../redux/auth/authSlice.operations';
 
@@ -11,13 +11,13 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import css from './RegisterPage.module.css';
+
 
 const defaultTheme = createTheme();
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
-const [isFormValid, setIsFormValid] = useState(true);
+
   const onSubmit = event => {
     event.preventDefault();
     event.preventDefault();
@@ -27,12 +27,7 @@ const [isFormValid, setIsFormValid] = useState(true);
       email: data.get('email'),
       password: data.get('password'),
     };
-if (!formData.email || !formData.password) {
-      setIsFormValid(false);
-      return;
-    }
 
-    setIsFormValid(true);
     dispatch(apiRegisterUser(formData));
   };
 

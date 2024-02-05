@@ -17,7 +17,7 @@ const UserMenu = () => {
 
   const userEmail = userData?.email ?? "Could't get user email";
   return (
-    <div>
+    <div className={css.container}>
       <p className={css.user}>{userEmail}</p>
       <button className={css.button} onClick={handleLogOut} disabled={isLoading} type="button">
         Logout
