@@ -23,6 +23,7 @@ const RegisterPage = () => {
     const data = new FormData(event.currentTarget);
 
     const formData = {
+      name: data.get('firstName') + ' ' + data.get('lastName'),
       email: data.get('email'),
       password: data.get('password'),
     };
