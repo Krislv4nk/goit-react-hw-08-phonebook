@@ -9,11 +9,13 @@ const initialState = {
   isLoggedIn: false,
   error: null,
   isLoading: false,
+  isRefreshing: false,
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {},
   extraReducers: builder =>
     builder
       .addCase(apiRegisterUser.fulfilled, (state, action) => {
@@ -32,6 +34,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.isLoggedIn = true;
         state.userData = action.payload;
+        state.isRefreshing = false;
       })
       .addCase(apiLogoutUser.fulfilled, () => {
         return initialState;

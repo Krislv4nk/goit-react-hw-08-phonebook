@@ -1,0 +1,28 @@
+.container{
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.title {
+    font-size: 40px;
+    color: #1976D2;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+.subtitle {
+    font-size: 20px;
+    color: #1976D2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.link{
+    color: #1976D2;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.link:hover{
+    color: #134e8a;
+}

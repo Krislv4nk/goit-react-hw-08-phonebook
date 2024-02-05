@@ -23,6 +23,9 @@ const Navigation = () => {
           </>
         ) : (
           <div className={css.navLinks}>
+            <NavLink className={({ isActive }) =>
+                `${css.navLink} ${isActive ? css.active : ''}`
+              } to="/">Home</NavLink>
           <NavLink
               className={({ isActive }) =>
                 `${css.navLink} ${isActive ? css.active : ''}`

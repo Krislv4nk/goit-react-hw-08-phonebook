@@ -13,8 +13,8 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', gap: '60px' }}>
-        <Navigation />
-        {isLoggedIn && <UserMenu />}
+      <Navigation />
+        {isLoggedIn && <UserMenu />} 
       </header>
 
       <main>{children}</main>
