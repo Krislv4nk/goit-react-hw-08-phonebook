@@ -1,0 +1,18 @@
+.user {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(25, 78, 163);
+}
+.button {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #1976D2;
+    background-color: #1976D2;
+    color: antiquewhite;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background-color: rgb(52, 108, 198);
+}

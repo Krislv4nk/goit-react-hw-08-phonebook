@@ -49,7 +49,8 @@ export const ContactForm = () => {
   };
 
   
-    return (
+  return (
+      <div className={css.container}>
       <form className={css.contactForm} onSubmit={handleAddContact}>
       <label className={css.label}>
         Name
@@ -78,7 +79,7 @@ export const ContactForm = () => {
       <button className={css.addContactBttn} type="submit">
         Add contact
       </button>
-    </form>
+    </form></div>
   );
 }
 

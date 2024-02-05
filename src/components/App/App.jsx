@@ -11,10 +11,6 @@ import  PrivateRoute  from 'components/PrivateRoute/PrivateRoute';
 import { Layout } from 'components/layout/layout';
 
 
-
-
-
-
 export const App = () => {
     const dispatch = useDispatch();
 
@@ -31,6 +27,7 @@ export const App = () => {
                     <Route path="/contacts" element={<PrivateRoute>
                 <ContactsPage />
               </PrivateRoute>}/>
+
             </Routes>
         </Layout>
       

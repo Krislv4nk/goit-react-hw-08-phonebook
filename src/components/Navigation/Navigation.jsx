@@ -9,42 +9,43 @@ const Navigation = () => {
  const isLoggedIn = useSelector(selectAuthIsLoggedIn);
   return (
     <div>
-      <ul>
-      {isLoggedIn ? (
-        <li>
+      <ul className={css.navList}>
+        {isLoggedIn ? (
+          <>
+            <NavLink
+              className={({ isActive }) =>
+                `${css.navLink} ${isActive ? css.active : ''}`
+              }
+              to="/contacts"
+            >
+              Phonebook
+            </NavLink>
+          </>
+        ) : (
+          <div className={css.navLinks}>
           <NavLink
-            className={({ isActive }) =>
-              `${css.navLink} ${isActive ? css.active : ''}`
-            }
-            to="/contacts"
-          >
-            Contacts
-          </NavLink>
-        </li>
-      ) : (
-        <li>
-          <NavLink
-            className={({ isActive }) =>
-              `${css.navLink} ${isActive ? css.active : ''}`
-            }
-            to="/register"
-          >
-            Register
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `${css.navLink} ${isActive ? css.active : ''}`
-            }
-            to="/login"
-          >
-            Login
-          </NavLink>
-        </li>
-      )}
-      <Outlet />
+              className={({ isActive }) =>
+                `${css.navLink} ${isActive ? css.active : ''}`
+              }
+              to="/register"
+            >
+              Sign up
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${css.navLink} ${isActive ? css.active : ''}`
+              }
+              to="/login"
+            >
+             Sign in
+            </NavLink>
+             </div>
+        )}
+        <Outlet />
       </ul>
     </div>
-  );
+);
+
 };
 
 export default Navigation;

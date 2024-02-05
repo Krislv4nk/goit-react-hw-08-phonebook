@@ -5,6 +5,8 @@ import {
   selectAuthIsLoading,
   selectAuthUserData,
 } from '../../redux/auth/authSlice.selectors';
+import css from './UserMenu.module.css';
+
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -16,12 +18,14 @@ const UserMenu = () => {
   const userEmail = userData?.email ?? "Could't get user email";
   return (
     <div>
-      <p>{userEmail}</p>
-      <button onClick={handleLogOut} disabled={isLoading} type="button">
+      <p className={css.user}>{userEmail}</p>
+      <button className={css.button} onClick={handleLogOut} disabled={isLoading} type="button">
         Logout
       </button>
     </div>
   );
 };
+
+
 
 export default UserMenu;

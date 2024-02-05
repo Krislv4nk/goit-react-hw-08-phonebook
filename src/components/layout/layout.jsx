@@ -12,7 +12,7 @@ export const Layout = ({ children }) => {
  
   return (
     <div>
-      <header >
+      <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', gap: '60px' }}>
         <Navigation />
         {isLoggedIn && <UserMenu />}
       </header>

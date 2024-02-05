@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import css from './ContactsPage.module.css';
+
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from '../redux/contacts/contactsSlice.operations';
 import { ContactForm } from 'components/contactForm/contactForm';
@@ -18,10 +18,9 @@ import { ContactList } from 'components/contactList/contactList';
   }, [dispatch])
 
     return (
-      <div className={css.container}>
-        <h1 className={css.phoneBookTitle}>Phonebook</h1>
+      <div >
         <ContactForm />
-        <h2 className={css.contactTitle}>Contacts</h2>
+        <h2 style={{ textAlign: 'center', marginTop: '20px',color: '#1976D2' }}>Contacts</h2>
         <Filter />
         <ContactList/>
       </div>
