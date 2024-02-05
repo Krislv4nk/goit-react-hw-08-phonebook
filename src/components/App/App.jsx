@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
-// import css from './App.module.css';
+import React, { useEffect,Suspense, lazy, } from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import RegisterPage from 'pages/RegisterPage';
-import LoginPage from 'pages/LoginPage';
-import ContactsPage from 'pages/ContactsPage';
 import { apiRefreshUser } from '../../redux/auth/authSlice.operations';
 import  RestrictedRoute  from 'components/RestrictedRoute/RestrictedRoute';
 import  PrivateRoute  from 'components/PrivateRoute/PrivateRoute';
 import { Layout } from 'components/layout/layout';
+import { Loader } from 'components/loader/loader';
+
+const RegisterPage = lazy(() => import('pages/RegisterPage'));
+const LoginPage = lazy(() => import('pages/LoginPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage'));
+
 
 
 export const App = () => {
@@ -18,7 +21,8 @@ export const App = () => {
     dispatch(apiRefreshUser());
   }, [dispatch]);
     return (
-      <Layout>
+        <Layout>
+            <Suspense fallback={<Loader />}>
             <Routes>
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<RestrictedRoute>
@@ -27,8 +31,8 @@ export const App = () => {
                     <Route path="/contacts" element={<PrivateRoute>
                 <ContactsPage />
               </PrivateRoute>}/>
-
             </Routes>
+            </Suspense>
         </Layout>
       
     );

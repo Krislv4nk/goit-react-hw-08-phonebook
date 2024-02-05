@@ -1,6 +1,6 @@
 import React from "react";
 import { Hourglass } from 'react-loader-spinner';
-import css from 'components/Loader/Loader.module.css';
+import css from 'components/loader/loader.module.css';
  
 
 export const Loader = ({ isLoading }) => {
