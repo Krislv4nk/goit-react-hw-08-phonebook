@@ -20,7 +20,6 @@ const RegisterPage = () => {
 
   const onSubmit = event => {
     event.preventDefault();
-    event.preventDefault();
     const data = new FormData(event.currentTarget);
 
     const formData = {

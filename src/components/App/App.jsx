@@ -13,7 +13,6 @@ const LoginPage = lazy(() => import('pages/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
 
 
-
 export const App = () => {
     const dispatch = useDispatch();
 
@@ -23,7 +22,7 @@ export const App = () => {
     return (
         <Layout>
             <Suspense fallback={<Loader />}>
-            <Routes>
+                <Routes>
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<RestrictedRoute>
                 <LoginPage />
