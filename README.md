@@ -16,7 +16,7 @@ If a user is not logged into their account, attempting to visit a restricted rou
 Клацніть на логотип бібліотеки, щоб перейти до її документації.
 
 Dependencies
-- [<img src="https://www.npmjs.com/static/images/emotion-logo-202103.svg" height="20"/> @emotion/react](https://www.npmjs.com/package/@emotion/react)
+- ![npm][<img src="https://www.npmjs.com/static/images/emotion-logo-202103.svg" height="20"/> @emotion/react](https://www.npmjs.com/package/@emotion/react)
 - [<img src="https://www.npmjs.com/static/images/emotion-logo-202103.svg" height="20"/> @emotion/styled](https://www.npmjs.com/package/@emotion/styled)
 - [<img src="https://mui.com/static/logo_raw.svg" height="20"/> @mui/icons-material](https://www.npmjs.com/package/@mui/icons-material)
 - [<img src="https://mui.com/static/logo_raw.svg" height="20"/> @mui/material](https://www.npmjs.com/package/@mui/material)
