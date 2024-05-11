@@ -5,29 +5,29 @@ The application has restricted routes accessible only to registered users.
 If a user is not logged into their account, attempting to visit a restricted route will redirect them to the login or registration page.
 
 Dependencies
+- [@emotion/react](https://www.npmjs.com/package/@emotion/react)
+- [@emotion/styled](https://www.npmjs.com/package/@emotion/styled)
+- [@mui/icons-material](https://www.npmjs.com/package/@mui/icons-material)
+- [@mui/material](https://www.npmjs.com/package/@mui/material)
+- [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit)
+- [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)
+- [@testing-library/react](https://www.npmjs.com/package/@testing-library/react)
+- [@testing-library/user-event](https://www.npmjs.com/package/@testing-library/user-event)
+- [axios](https://www.npmjs.com/package/axios)
+- [formik](https://www.npmjs.com/package/formik)
+- [nanoid](https://www.npmjs.com/package/nanoid)
+- [notiflix](https://www.npmjs.com/package/notiflix)
+- [react](https://www.npmjs.com/package/react)
+- [react-dom](https://www.npmjs.com/package/react-dom)
+- [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner)
+- [react-redux](https://www.npmjs.com/package/react-redux)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [react-scripts](https://www.npmjs.com/package/react-scripts)
+- [react-toastify](https://www.npmjs.com/package/react-toastify)
+- [redux-persist](https://www.npmjs.com/package/redux-persist)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+- [web-vitals](https://www.npmjs.com/package/web-vitals)
 
-@emotion/react: ^11.11.3
-@emotion/styled: ^11.11.0
-@mui/icons-material: ^5.15.7
-@mui/material: ^5.15.7
-@reduxjs/toolkit: ^2.0.1
-@testing-library/jest-dom: ^5.16.3
-@testing-library/react: ^12.1.4
-@testing-library/user-event: ^13.5.0
-axios: ^1.6.7
-formik: ^2.4.5
-nanoid: ^5.0.4
-notiflix: ^3.2.7
-react: ^18.1.0
-react-dom: ^18.1.0
-react-loader-spinner: ^6.1.6
-react-redux: ^9.1.0
-react-router-dom: ^6.21.3
-react-scripts: 5.0.1
-react-toastify: ^10.0.4
-redux-persist: ^6.0.0
-redux-thunk: ^3.1.0
-web-vitals: ^2.1.3
 
 
 Getting Started
