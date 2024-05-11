@@ -63,7 +63,7 @@ Dependencies
 </a>
 <a href="https://www.npmjs.com/package/react-toastify">
     <img alt="react-toastify" src="https://img.shields.io/npm/v/react-toastify?color=%23ff69b4&label=react-toastify&style=for-the-badge">
-</a
+</a>
 
 
 Getting Started
