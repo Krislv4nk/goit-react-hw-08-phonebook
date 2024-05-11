@@ -3,6 +3,17 @@ Phonebook
 Phonebook is a web application that allows users to conveniently manage their contacts.
 The application has restricted routes accessible only to registered users.
 If a user is not logged into their account, attempting to visit a restricted route will redirect them to the login or registration page.
+## Залежності
+
+Цей проект використовує наступні бібліотеки:
+
+- !React
+- !Redux
+- !Axios
+- !Formik
+- !Yup
+
+Клацніть на логотип бібліотеки, щоб перейти до її документації.
 
 Dependencies
 - [<img src="https://www.npmjs.com/static/images/emotion-logo-202103.svg" height="20"/> @emotion/react](https://www.npmjs.com/package/@emotion/react)
