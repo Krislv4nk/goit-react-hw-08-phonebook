@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: auto;
+}
+.cover {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+}
+.header {
+    color: #1976D2;
+}
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  width: 500px;
+}
+
+
