@@ -11,6 +11,12 @@
     align-items: flex-start;
   
 }
+.coverLogin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  
+}
 .header {
     color: #1976D2;
 }

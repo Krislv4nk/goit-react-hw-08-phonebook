@@ -7,14 +7,17 @@ import css from './RegisterPage.module.css'
 const LoginPage = () => {
   return (
    
-      <div className={css.wrapper}>
-        <div className={css.formContainer}>
-          <h2 className={css.header}>Sign In</h2>
-          <LoginForm />
-      </div>
+    <div className={css.wrapper}>
+      
       <div className={css.cover}>
         <Slideshow />
       </div>
+      <div>
+        <div className={css.formContainer}>
+          <h2 className={css.header}>Sign In</h2>
+          <LoginForm />
+        </div>
+        </div>
       </div>
    
   );
