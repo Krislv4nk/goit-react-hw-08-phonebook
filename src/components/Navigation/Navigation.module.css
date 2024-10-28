@@ -1,3 +1,6 @@
+
+@media screen and (min-width: 320px) {
+
 .navLinks {
     display: flex;
     gap: 45px;
@@ -15,4 +18,5 @@
     cursor: pointer;
     text-decoration: underline;
     font-weight: 700;
+}
 }

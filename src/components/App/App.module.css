@@ -1,3 +1,9 @@
+
+@media screen and (min-width: 320px) {
+    
+
+
+
 .container {
     border-radius: 10px;
     background-color: rgb(214, 219, 224);
@@ -11,4 +17,5 @@
 }
 .contactTitle {
     font-size: 16px;
+}
 }

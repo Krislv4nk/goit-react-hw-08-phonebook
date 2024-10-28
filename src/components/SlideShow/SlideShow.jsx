@@ -41,7 +41,7 @@ const Slideshow = () => {
       <img
         src={images[currentImage]}
         alt={`slide-${currentImage}`}
-        style={{ width: '100%', height: 'auto', maxWidth: '1024px' }}
+        style={{ width: '100%', height: 'auto', maxWidth: '824px' }}
       />
     </Box>
   );
